@@ -41,8 +41,6 @@ Based on the YARA rules you created and the observable indicators described in e
 | `volt.wav`              |       *(no definitive match)* | `is_Packed2` expects JPEG header/trailer and `SR` packer marker + `"Google"` string. Unless `volt.wav` contains an embedded JPEG with those markers, the rule would not match. Based on filename `volt.wav` this is **less likely** to match, but embedded payloads are possible. | **Inconclusive** — likely benign unless embedded JPEG/packer markers exist; verify with PE/file inspection.                                             |
 | `fileview.exe`          | *(no rule matched by design)* | No rule in the set specifically targets `fileview.exe` by name or pattern. If it contains indicators overlapping the other rules, those would be captured above.                                                                                                                  | **Likely benign** (no YARA rule hit); verify with PE inspection if concerned.                                                                           |
 
-> Notes: the table above is a static-evidence mapping using the rule conditions you supplied. If you executed the rules and have the run logs, please paste them and I will replace the “would match / likely” language with definitive “matched” / “no match” entries and embed logs/screenshots.
-
 ---
 
 ## Analysis / Observed Functionality (evidence-based)
@@ -107,3 +105,4 @@ All four indicators together are a strong static signature for a downloader that
 ## Conclusion
 
 The static evidence mapping indicates `imagedownloader.exe` and `SecurityAdvisory.docm` are the primary items of interest. `frontpage.jpg` is potentially hosting encoded content and should be inspected for appended/base64 payloads. `volt.wav` and `fileview.exe` are currently less likely to match the supplied rules but should be verified via quick file-inspection (search for embedded JPEGs in `volt.wav`, and PE inspection for `fileview.exe`).
+
