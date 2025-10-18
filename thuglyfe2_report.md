@@ -1,8 +1,7 @@
 # Cyber Malware Analysis Report — thugLyfe Family (Week 07 Ruleset Run)
 
-**Report Date:** 2025-10-17
-**Analyst:** Dylan Pallatroni
-**Source Template:** CMAR_Template_2021_FIRST_Malware_SIG.docx. 
+**Report Date:** 2025-10-17  
+**Analyst:** Dylan Pallatroni  
 
 ---
 
@@ -170,3 +169,4 @@ All four indicators together are a strong static signature for a downloader that
 Using the rules you authored, the static evidence mapping indicates `imagedownloader.exe` and `SecurityAdvisory.docm` are the primary items of interest (downloader and macro-enabled document, respectively). `frontpage.jpg` is potentially hosting encoded content and should be inspected for appended/base64 payloads. `volt.wav` and `fileview.exe` are currently less likely to match the supplied rules but should be verified via quick file-inspection (search for embedded JPEGs in `volt.wav`, and PE inspection for `fileview.exe`).
 
 If you want a final report file in `.docx` format using the CMAR template, or if you want me to insert the exact YARA run logs and file hashes into this report, paste or attach those logs/hashes now and I will update the report and produce a downloadable `.docx` formatted version.
+
