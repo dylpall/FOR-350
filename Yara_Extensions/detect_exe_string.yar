@@ -1,8 +1,8 @@
 rule detect_exe_extension {
     meta:
-        author = "Savannah"
+        author = ""
         description = "Detects presence of .exe string in file text"
-        date = "2025-11-01"
+        date = ""
         version = "1.0"
     strings:
         $ext = ".exe"

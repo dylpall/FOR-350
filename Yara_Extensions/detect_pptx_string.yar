@@ -1,8 +1,8 @@
 rule detect_pptx_extension {
     meta:
-        author = "Savannah"
+        author = ""
         description = "Detects presence of .pptx string in file text"
-        date = "2025-11-01"
+        date = ""
         version = "1.0"
     strings:
         $ext = ".pptx"
